@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Adoption</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="ctrl.js"></script>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+<div id="container">
+    <div class="jumbotron text-center">
+    <h1>Pawsitively Purrfect Cats!</h1>
+    </div>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <p>Search: <input ng-model ="searchName" type ="text"></p>
+    <div class="text-center">
+    <span>Sort by: </span><button type="button" class="btn btn-primary" ng-click="orderByMe('name')">Name</button>  |  <button type="button" class="btn btn-primary" ng-click="orderByMe('age')">Age</button>
+    </div>
+    <p>You searched for: {{searchName}}</p>
+    <ul>
+        <li ng-repeat ="x in cats | filter: searchName| orderBy: myOrderBy">
+            <img class="img" ng-src="{{x.imageUrl}}" alt="{{x.name}}" />
+            <strong>Name: {{x.name}}</strong>
+            <p>Age: {{x.age}}</p>
+            <p>Colour: {{x.colour}} Hair: {{x.hair}}</p>
+            <p class="smallPrint">Photo Credit: {{x.creditFirst + " " + x.creditLast}}</p>
+        </li>
+    </ul>
+</div>
+</div>
+</body>
+<footer class="text-center">
+    All photos from <a href="https://unsplash.com/images/animals/cat">unsplash.com</a> unless otherwise stated.
+</footer>
+</html>

@@ -1,0 +1,50 @@
+/*
+author: jwhittaker
+date created: 03/15/2021
+Custom CSS based on requirements for A4*/
+
+
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid green;
+    padding: 5px;
+    margin-top: 10px;
+    width: 800px;
+}
+
+/*--------------------------------------------------------------------*/
+/*General Styling*/
+img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+ul {
+    list-style-type: none;
+}
+
+p .smallPrint{
+font-size: xx-small;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 800px;
+}
+
+.jumbotron{
+    background-color: antiquewhite;
+}
+
+p .paragraph {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

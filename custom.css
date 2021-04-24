@@ -1,13 +1,13 @@
 /*
 author: jwhittaker
-date created: 03/15/2021
-Custom CSS based on requirements for A4*/
+date created: 04/22/2021
+Custom CSS based on requirements for A6*/
 
 
 #container {
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid green;
+    border: 1px antiquewhite;
     padding: 5px;
     margin-top: 10px;
     width: 800px;

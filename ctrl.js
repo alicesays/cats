@@ -1,3 +1,10 @@
+/*
+* AngularJS controller (JavaScript that controls the modules)
+* Cat information is hard-coded as an array
+* author: jwhittaker
+* date: 04/23/2021
+*/
+
 app.controller("myCtrl", function($scope) {
     $scope.searchName = "";
     $scope.cats = [
@@ -137,6 +144,7 @@ app.controller("myCtrl", function($scope) {
             "imageUrl": "img/beanjo.jpeg"
         }
     ];
+    //Instructions for sorting
     $scope.orderByMe = function(x) {
         $scope.myOrderBy = x;
     }
